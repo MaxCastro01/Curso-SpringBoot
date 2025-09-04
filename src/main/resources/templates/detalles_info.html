@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"> <!-- motor de plantillas Thymeleaf para generar nuestras vistas dinamicamente  --> 
+<head>              <!-- xmlns que indica que estamos usando espacios con nombres -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpringBoot#1</title>
+    <title th:text="${Titulo}">SpringBoot#1</title>
 </head>
 <body>
-    <h1>Servidor en linea :D</h1>
+    <h1 th:text="${Titulo}"></h1> <!-- Aqui traemos las expresiones de nuestro thymeleaf para mostrar dinamicamente el valor de Titulo-->
+    <h2 th:text="${Servidor}"></h2>
+    <h2 th:text="${IP}"></h2>
 </body>
 </html>
